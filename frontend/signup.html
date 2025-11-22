@@ -1,0 +1,26 @@
+<form id="signupForm">
+  <h2>Create Account</h2>
+  <input id="name" placeholder="Name">
+  <input id="email" placeholder="Email">
+  <input id="password" placeholder="Password">
+  <button>Signup</button>
+</form>
+
+<script>
+document.getElementById("signupForm").addEventListener("submit", async(e)=>{
+  e.preventDefault();
+
+  await fetch("http://localhost:5000/api/signup", {
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({
+      name: name.value,
+      email: email.value,
+      password: password.value
+    })
+  });
+
+  alert("Signup successful");
+  location.href="login.html";
+});
+</script>

@@ -1,0 +1,58 @@
+body {
+  font-family: Arial;
+  margin: 0;
+  background: #f8f8f8;
+}
+
+header {
+  background: #222;
+  padding: 15px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+header nav a {
+  color: #fff;
+  margin-left: 15px;
+  text-decoration: none;
+}
+
+.hero {
+  height: 300px;
+  background: url("https://source.unsplash.com/1600x800/?travel") no-repeat center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  text-shadow: 1px 1px 5px black;
+}
+
+.cards {
+  display: flex;
+  justify-content: space-around;
+  padding: 20px;
+}
+
+.card {
+  background: white;
+  width: 30%;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 10px gray;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px;
+}
+
+button {
+  background: #007bff;
+  padding: 10px;
+  border: none;
+  color: white;
+  width: 100%;
+  margin-top: 10px;
+  cursor: pointer;
+}
