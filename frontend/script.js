@@ -6,7 +6,7 @@ async function payNow(place, amount) {
     return window.location = "login.html";
   }
 
-  let orderRes = await fetch("http://localhost:5000/api/create-order", {
+  let orderRes = await fetch("https://tour-3owe.onrender.com/api/create-order", {
     method: "POST",
     headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ amount })
@@ -21,7 +21,7 @@ async function payNow(place, amount) {
     order_id: order.id,
 
     handler: async function (response) {
-      await fetch("http://localhost:5000/api/booking", {
+      await fetch("https://tour-3owe.onrender.com/api/booking", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({
@@ -44,7 +44,7 @@ document.getElementById("feedbackForm")
   .addEventListener("submit", async (e) => {
     e.preventDefault();
 
-    await fetch("http://localhost:5000/api/feedback", {
+    await fetch("https://tour-3owe.onrender.com/api/feedback", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
