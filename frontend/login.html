@@ -9,7 +9,7 @@
 document.getElementById("loginForm").addEventListener("submit", async (e)=>{
   e.preventDefault();
 
-  let res = await fetch("http://localhost:5000/api/login", {
+  let res = await fetch("https://tour-3owe.onrender.com/api/login", {
     method:"POST",
     headers:{"Content-Type":"application/json"},
     body:JSON.stringify({
